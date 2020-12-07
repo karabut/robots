@@ -1,8 +1,7 @@
 #include <iostream>
-#include <gtest/gtest.h>
+#include "Map.h"
 using namespace std;
 int main() {
- testing::InitGoogleTest();
-    return RUN_ALL_TESTS();
+    Map kek;
+    kek.draw();
 }
-
