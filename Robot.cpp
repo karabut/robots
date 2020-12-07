@@ -3,3 +3,11 @@
 //
 
 #include "Robot.h"
+
+Collector::Collector(int i, int j) {
+collectedApplesNumber = 0;
+xCoordinate = i;
+yCoordinate = j;
+robotsMap.makeUnknown();
+robotsMap.setRobot(i, j);
+}
