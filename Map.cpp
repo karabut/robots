@@ -49,6 +49,10 @@ void Map::setRobot(int i, int j) {
     board[i][j] = 'R';
 }
 
+void Map::setEmpty(int i, int j) {
+    board[i][j] = '*';
+}
+
 Map::Map(int k, int m) {
     ifstream file;
     file.open("/Users/katya/CLionProjects/robots/Map.txt");
@@ -91,4 +95,36 @@ void Map::makeUnknown() {
         }
     }
 }
+
+string Map::whatIsInCell(int i, int j) {
+     if(board[i][j] == '*'){
+         return "empty";
+     }
+
+     if(board[i][j] == '?'){
+         return "unknown";
+     }
+
+     if(board[i][j] == 'A'){
+         return "apple";
+     }
+
+     if(board[i][j] == 'r'){
+         return "rock";
+     }
+
+     if(board[i][j] == 'b'){
+         return "bomb";
+     }
+
+     return "error";
+}
+
+int Map::getYCoordinate() {
+    return totalY;
+}
+
+int Map::getXCoordinate() {
+     return totalX;
+ }
 

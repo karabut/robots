@@ -21,6 +21,10 @@ public:
     void setRobot(int i, int j);
     void draw();
     void makeUnknown();
+    void setEmpty(int i, int j);
+    string whatIsInCell(int i, int j);
+    int getXCoordinate();
+    int getYCoordinate();
     Map();
 
     //constructor that initialise everything unknown and put robot to i j;

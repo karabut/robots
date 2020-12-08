@@ -3,6 +3,6 @@
 #include "Robot.h"
 using namespace std;
 int main() {
- Map k ("/Users/katya/CLionProjects/robots/Map.txt") ;
+ Map k;
  k.draw();
 }
