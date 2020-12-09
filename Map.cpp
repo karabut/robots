@@ -26,6 +26,7 @@ using namespace std;
         for(int i = 0; i < totalX; i++){
             for(int j = 0; j < totalY; j ++){
                 file >> board[i][j];
+
                 if(board[i][j] == 'a'){
                     applesTotalNumber++;
                 }

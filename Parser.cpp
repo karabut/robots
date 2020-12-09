@@ -36,10 +36,11 @@ Command* Parser::readNextCommand() {
 
     getline(cin, line);
 
-
     vector<string> parts; // line - entered from cin, parts - where to copy
 
     split(line, &parts, ' ');
+
+   // cout << " command = " << parts[0] << " " << " dir = " << parts[1] << endl;
 
     if(parts[0] == "MOVE"){
         return new Move(parts[1]);

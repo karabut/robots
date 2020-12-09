@@ -10,7 +10,8 @@ using namespace std;
 
 class Command {
 public:
-    virtual void apply(Robot& robot) = 0;
+    virtual void applyToRobot(Robot& robot) = 0;
+    //void virtual applyToMode() = 0;
 };
 
 class Move: public Command {
@@ -18,8 +19,10 @@ private:
     string direction;
 public:
     Move(string _direction);
-    void apply(Robot& robot) override;
+    void applyToRobot(Robot& robot) override;
 };
+
+
 
 
 #endif //TEST_TEMPLATE_COMMAND_H
