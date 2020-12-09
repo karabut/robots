@@ -23,6 +23,4 @@ public:
 };
 
 
-
-
 #endif //TEST_TEMPLATE_COMMAND_H

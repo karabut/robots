@@ -22,10 +22,9 @@ private:
     void stepHelperX(int newCoordinate);
     void stepHelperY(int newCoordinate);
 public:
-    //randomly finds the position for robot
-    //Collector();
     Collector(int i, int j);
     void step(string direction) override;
+    void scan(Map& map);
 };
 
 

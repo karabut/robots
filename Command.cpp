@@ -8,7 +8,8 @@ Move::Move(string _direction) {
     direction = _direction;
 }
 
-void Move::applyToRobot(Robot &robot) {
+void Move::applyToRobot(Robot& robot) {
 robot.step(direction);
 //TODO probably works
 }
+

@@ -65,7 +65,6 @@ Map::Map(int k, int m) {
 
         file >> totalX;
         file >> totalY;
-        cout << totalX << " " << totalY << endl;
 
         board = new char*[totalX];
         for(int i = 0; i < totalX; i ++){
@@ -128,4 +127,13 @@ int Map::getYCoordinate() {
 int Map::getXCoordinate() {
      return totalX;
  }
+
+int Map::getApplesNumber() {
+    return applesTotalNumber;
+}
+
+//govnokod
+void Map::Eq(int i, int j, Map &map) {
+board[i][j] = map.board[i][j];
+}
 

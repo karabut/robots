@@ -8,6 +8,7 @@ int main() {
  Map k;
  k.draw();
  cout << endl;
+ //cout << k.getApplesNumber();
 
  Collector collector (0,1);
  collector.robotsMap.draw();
@@ -15,6 +16,11 @@ int main() {
 
  collector.robotsMap.setEmpty(1,1);
  collector.robotsMap.draw();
+ cout << endl;
+
+ collector.scan(k);
+ collector.robotsMap.draw();
+
 
  Parser parser;
  Command* command = parser.readNextCommand();

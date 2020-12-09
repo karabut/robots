@@ -20,7 +20,6 @@ void Collector::stepHelperX(int newCoordinate) {
     }
 
     if(robotsMap.whatIsInCell(newCoordinate, yCoordinate) == "apple"){
-        //todo also check for apples number
         robotsMap.setEmpty(xCoordinate, yCoordinate);
         robotsMap.setRobot(newCoordinate, yCoordinate);
         xCoordinate = newCoordinate;
@@ -40,10 +39,6 @@ void Collector::stepHelperX(int newCoordinate) {
 }
 
 void Collector::stepHelperY(int newCoordinate) {
-
-    cout << robotsMap.whatIsInCell(xCoordinate, newCoordinate) << endl;
-    cout << xCoordinate << yCoordinate << endl;
-    cout << xCoordinate << newCoordinate << endl;
 
     if(robotsMap.whatIsInCell(xCoordinate, newCoordinate) == "rock"){
         //do nothing
@@ -93,6 +88,26 @@ void Collector::step(string direction) {
     if(direction == "R" && (yCoordinate + 1 < robotsMap.getYCoordinate())){
 
         stepHelperY(yCoordinate + 1);
+    }
+
+}
+
+void Collector::scan(Map& map) {
+
+    if(xCoordinate - 1 >= 0){
+        robotsMap.Eq(xCoordinate - 1, yCoordinate, map);
+    }
+
+    if(xCoordinate + 1 < robotsMap.getXCoordinate()){
+        robotsMap.Eq(xCoordinate + 1, yCoordinate, map);
+    }
+
+    if(yCoordinate - 1 >= 0){
+        robotsMap.Eq(xCoordinate, yCoordinate - 1, map);
+    }
+
+    if(yCoordinate + 1 < robotsMap.getYCoordinate()){
+        robotsMap.Eq(xCoordinate, yCoordinate + 1, map);
     }
 
 }

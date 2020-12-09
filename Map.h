@@ -25,6 +25,8 @@ public:
     string whatIsInCell(int i, int j);
     int getXCoordinate();
     int getYCoordinate();
+    int getApplesNumber();
+    void Eq(int i, int j, Map& map);
     Map();
 
     //constructor that initialise everything unknown and put robot to i j;
