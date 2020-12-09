@@ -40,7 +40,7 @@ void Collector::stepHelperX(int newCoordinate) {
 }
 
 void Collector::stepHelperY(int newCoordinate) {
-    cout << "we are in stepHelperY" << endl;
+
     cout << robotsMap.whatIsInCell(xCoordinate, newCoordinate) << endl;
     cout << xCoordinate << yCoordinate << endl;
     cout << xCoordinate << newCoordinate << endl;
@@ -58,7 +58,7 @@ void Collector::stepHelperY(int newCoordinate) {
     }
 
     if(robotsMap.whatIsInCell(xCoordinate, newCoordinate) == "empty"){
-        cout << "we find the right cell to compare" << endl;
+
         robotsMap.setEmpty(xCoordinate, yCoordinate);
         robotsMap.setRobot(xCoordinate, newCoordinate);
         yCoordinate = newCoordinate;

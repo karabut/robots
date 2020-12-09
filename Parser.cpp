@@ -40,7 +40,6 @@ Command* Parser::readNextCommand() {
 
     split(line, &parts, ' ');
 
-   // cout << " command = " << parts[0] << " " << " dir = " << parts[1] << endl;
 
     if(parts[0] == "MOVE"){
         return new Move(parts[1]);

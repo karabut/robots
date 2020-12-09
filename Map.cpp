@@ -62,7 +62,7 @@ Map::Map(int k, int m) {
         cout << "can't open the file" << endl;
     } else {
         applesTotalNumber = 0;
-        cout << "opened the file" << endl;
+
         file >> totalX;
         file >> totalY;
         cout << totalX << " " << totalY << endl;
